@@ -136,39 +136,28 @@ let timer = undefined
         },500)
     })
 
-    function search(keyword){                                 
+    function search(keyword){
         return new Promise((resolve,reject)=>{
-            var database = [                                  
-                { "id":1,"name":"一笑倾城","singer":"","songInfo":"汪苏泷 / 明柏辰&明筱岩 / 陈墨一 / 杨梓鑫 - 我想和你唱 第二季 第9期"},
-                { "id":2,"name":"最美","singer":"(原唱：羽泉)","songInfo":"陈赫 - 2017跨界歌王 第十一期"},
-                { "id":3,"name":"소나기","singer":"","songInfo":"Oohyo-비밀의 숲 OST Part.3"},
-                { "id":4,"name":"不为谁而作的歌","singer":"","songInfo":"林俊杰-天生是优我 第十二期"},
-                { "id":5,"name":"失约","singer":"","songInfo":"Twins-花约"},
-                { "id":6,"name":"下一站茶山刘","singer":"","songInfo":"房东的猫-拾贰"},
-                { "id":7,"name":"泡沫","singer":"","songInfo":"G.E.M.邓紫棋 / 余赛亚 / 戴斯琪 / 肖茗-我想和你唱 第二季 第9期"},
-                { "id":8,"name":"成都","singer":"(原唱：赵雷)","songInfo":"张继科-2017跨界歌王 第十一期"},
-                { "id":9,"name":"新贵妃醉酒","singer":"","songInfo":"李玉刚 / 徐天意 / 杨姣 / 祝颂皓 - 我想和你唱 第二季 第9期"},
-                { "id":10,"name":"父亲写的散文诗","singer":"(原唱：许飞)","songInfo":"姚晨-2017跨界歌王 第十一期"},
-                { "id":11,"name":"追光者","singer":"电视剧《夏至未至》插曲","songInfo":"岑宁儿-夏至未至 影视原声带"},
-                { "id":12,"name":"童话镇","singer":"","songInfo":"陈一发儿-童话镇"},
-                { "id":13,"name":"成都","singer":"","songInfo":"赵雷-成都"},
-                { "id":14,"name":"安和桥","singer":"","songInfo":"宋冬野-安和桥北"},
-                { "id":15,"name":"暧昧","singer":"","songInfo":"薛之谦-暧昧"},
-                { "id":16,"name":"说散就散","singer":"","songInfo":"JC-说散就散"},
-                { "id":17,"name":"刚好遇见你","singer":"","songInfo":"李玉刚-刚好遇见你"},
-                { "id":18,"name":"全部都是你","singer":"","songInfo":"Dragon Pig / CNBALLER / CLOUD WANG-全部都是你"},
-                { "id":19,"name":"Shape of You","singer":"","songInfo":"Ed Sheeran-Shape Of You"},
-                { "id":21,"name":"Despacito (Remix)","singer":"","songInfo":"Luis Fonsi / Daddy Yankee / Justin Bieber-Despacito (Remix)"},
-                { "id":22,"name":"小半","singer":"","songInfo":"陈粒-小梦大半"},
-                { "id":23,"name":"마지막처럼 ","singer":"","songInfo":"BLACKPINK-마지막처럼"}
+            var database = [
+                { "id":1,"name":"镜中人","singer":"","songInfo":"清弄 - 镜中人"},
+                { "id":2,"name":"春意红包","singer":"","songInfo":"三无MarBlue / 祖娅纳惜 / 泠鸢yousa / 小缘 / 洛萱 / 不才"},
+                { "id":3,"name":"若当来世","singer":"（狐妖小红娘 月红篇 OP）","songInfo":"冥月 / Mario - 狐妖小红娘 动画原声带"},
+                { "id":4,"name":"我的一个道姑朋友","singer":"（Cover Lon）","songInfo":"双笙 - 我的一个道姑朋友"},
+                { "id":5,"name":"刚好遇见你","singer":"","songInfo":"排骨教主 - 刚好遇见你"},
+                { "id":6,"name":"万神纪","singer":"（VOCALOID）","songInfo":"肥皂菌丨珉珉的猫咪 - 万神纪"},
+                { "id":7,"name":"小城谣","singer":"","songInfo":"泥鳅Niko / 翘课迟到少恭桑"},
+                { "id":8,"name":"樱花樱花想见你","singer":"","songInfo":"李蚊香 / 满汉全席 - 【纯男声】满汉全席音乐团队"},
+                { "id":9,"name":"四月は君の嘘","singer":"","songInfo":"横山克 - 四月は君の嘘 ORIGINAL SONG & SOUNDTRACK"},
+                { "id":10,"name":"悠哉日常~悠哉~悠哉","singer":"","songInfo":"泠鸢yousa / Hanser / 泠鸢yousaの呆萌忆 - 悠哉日常~悠哉~悠哉"}
             ]
 
-            let result = database.filter(function(item){      
+            let result = database.filter(function(item){
                 return item.name.indexOf(keyword)>=0
+            }
             })
             setTimeout(function(){
                 resolve(result)
-            },(Math.random () * 500 + 1000))  
+            },(Math.random () * 500 + 1000))
         })
     }
     window.search = search

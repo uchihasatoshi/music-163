@@ -153,7 +153,6 @@ let timer = undefined
 
             let result = database.filter(function(item){
                 return item.name.indexOf(keyword)>=0
-            }
             })
             setTimeout(function(){
                 resolve(result)

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>歌曲播放</title>
+    <link rel="stylesheet" type="text/css" href="./song.css">
+    <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+
+    <script>
+        var scale = 1 / window.devicePixelRatio // 1\2\3
+        document.write(
+            `
+      <meta name="viewport"
+        content="initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">
+      `
+        )
+        var width = document.documentElement.clientWidth / window.devicePixelRatio
+        var css = `
+    html{
+      font-size: ${width / 10 * window.devicePixelRatio}px;
+    }
+    `
+        document.write(`<style>${css}</style>`)
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="img" id="img"></div>
+        <div class="disc-container">
+            <img src="//s3.music.126.net/m/s/img/needle-ip6.png?be4ebbeb6befadfcae75ce174e7db862 " alt="" class="pointer">
+
+            <div class="disc">
+                <div class="icon-wrapper">
+					<svg class="icon icon-play">
+						<use xlink:href="#icon-play"></use>
+					</svg>
+					<svg class="icon icon-pause">
+						<use xlink:href="#icon-pause"></use>
+					</svg>
+				</div>
+                <img src="//s3.music.126.net/m/s/img/disc-ip6.png?69796123ad7cfe95781ea38aac8f2d48" alt="" class="ring">
+                <img src="//s3.music.126.net/m/s/img/disc_light-ip6.png?996fc8a2bc62e1ab3f51f135fc459577" alt="" class="lightshadow">
+                <img alt="" class="cover">
+            </div>
+        </div>
+        <div class="song-description">
+            <h2></h2>
+            <div class="lyric">
+                <div class="lines">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="links">
+            <a href="#">打 开</a>
+            <a href="#" class="download">下 载</a>
+        </div>
+    </div>
+	<script src="//at.alicdn.com/t/font_sjrk11tjzf979zfr.js"></script>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="song.js"></script>
+</body>
+
+</html>
